@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Humanoid Physics ML Sandbox</title>
+    <style>
+      html, body { margin: 0; height: 100%; overflow: hidden; font-family: Inter, system-ui, sans-serif; }
+      #app { width: 100%; height: 100%; }
+      #ui-panel {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        width: 320px;
+        background: rgba(15, 23, 42, 0.86);
+        color: #e2e8f0;
+        padding: 12px;
+        border-radius: 10px;
+        backdrop-filter: blur(4px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+        z-index: 20;
+      }
+      .row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+      .row > * { flex: 1; }
+      button, select {
+        background: #1e293b;
+        color: #f1f5f9;
+        border: 1px solid #334155;
+        border-radius: 6px;
+        padding: 6px 8px;
+      }
+      #stats { font-size: 12px; line-height: 1.4; max-height: 300px; overflow: auto; }
+      .agent-row { margin-bottom: 6px; border-bottom: 1px solid #334155; padding-bottom: 6px; }
+      #hint { font-size: 11px; color: #cbd5e1; margin-top: 8px; }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.17.0/dist/tf.min.js"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
