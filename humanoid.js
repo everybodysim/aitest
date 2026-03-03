@@ -162,7 +162,7 @@ export class HumanoidAgent {
     for (let i = 0; i < this.joints.length; i += 1) {
       const j = this.joints[i];
       const torque = THREE.MathUtils.clamp(actions[i] || 0, -1, 1) * j.maxTorque;
-      j.constraint.setMotorSpeed(torque * 0.06);
+      j.constraint.setMotorSpeed(torque * 0.6);
       j.constraint.motorEquation.maxForce = Math.abs(torque);
       j.constraint.motorEquation.minForce = -Math.abs(torque);
     }
